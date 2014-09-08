@@ -46,6 +46,8 @@ local function IsSquareEnixGame(Content) return (string.lower(string.sub(Content
 local function IsBethesdaGame(Content) return (string.lower(string.sub(Content.Publisher, 0, 8)) == "bethesda") end
 
 local function IsEidosGame(Content) return (string.lower(string.sub(Content.Publisher, 0, 5)) == "eidos") end
+	
+local function IsDisneyGame(Content) return (string.lower(string.sub(Content.Publisher, 0, 6)) == "disney") end
 
 GameListFilterCategories.Publishers = {}
 GameListFilterCategories.Publishers["EA"] = function(Content) return IsEaGame(Content) end
@@ -64,3 +66,4 @@ GameListFilterCategories.Publishers["Sega"] = function(Content) return IsSegaGam
 GameListFilterCategories.Publishers["Square Enix"] = function(Content) return IsSquareEnixGame(Content) end
 GameListFilterCategories.Publishers["Bethesda"] = function(Content) return IsBethesdaGame(Content) end
 GameListFilterCategories.Publishers["Eidos"] = function(Content) return IsEidosGame(Content) end
+GameListFilterCategories.Publishers["Disney"] = function(Content) return IsDisneyGame(Content) end
