@@ -9,6 +9,7 @@ local function IsUbisoftGame(Content) return (string.lower(string.sub(Content.Pu
 local function IsWarnerBrosGame(Content)
 	if (string.lower(string.sub(Content.Publisher, 0, 11)) == "warner bros") then return true end
 	if (string.lower(string.sub(Content.Publisher, 0, 8)) == "wb games") then return true end
+	if (string.lower(string.sub(Content.Publisher, 0, 15)) == "warner brothers" then return true end
 	return false
 end
 
